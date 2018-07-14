@@ -1,0 +1,79 @@
+body {
+     margin: 0;
+     padding: 0;
+}
+
+#header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+  font-size: 17px;
+}
+
+#gridContainer {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+}
+
+.modeSelector {
+  height: 400px;
+  background-color: red;
+  position: relative;
+}
+
+.modeSelector h1 {
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+  font-size: 17px;
+}
+
+#modern {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/harden1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#allTime {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/jordan1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#warriors {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/curry1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#allDefense {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/kawhi1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#allLakers {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/lakers1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#allCeltics {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/garnett1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+@media(max-width: 768px){
+  #gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
