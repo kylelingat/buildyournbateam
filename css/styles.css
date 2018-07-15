@@ -10,20 +10,31 @@ body {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
   font-size: 17px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 #gridContainer {
   display: grid;
-  grid-gap: 2px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+  grid-template-columns: 1fr 1fr;
   margin: auto;
+  margin-left: 8px;
+  margin-right: 8px;
+
 }
 
 .modeSelector {
-  height: 400px;
-  background-color: red;
-  position: relative;
+  overflow: hidden;
 }
+
+.modeSelector, #modernImg, #allTimeImg, #warriorsImg, #allDefenseImg, #allLakersImg, #allCelticsImg {
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 
 .modeSelector h1 {
   position: absolute;
@@ -35,40 +46,93 @@ body {
   font-size: 17px;
 }
 
-#modern {
+.modeSelector .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.modeSelector .text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.modeSelector:hover #modernImg{
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.modeSelector:hover #allTimeImg{
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.modeSelector:hover #warriorsImg{
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.modeSelector:hover #allLakersImg{
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.modeSelector:hover #allDefenseImg{
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.modeSelector:hover #allCelticsImg{
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.modeSelector:hover .middle {
+  opacity: 1;
+}
+
+
+#modernImg {
   background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/harden1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
-#allTime {
+#allTimeImg {
   background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/jordan1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
-#warriors {
+#warriorsImg {
   background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/curry1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
-#allDefense {
+#allDefenseImg {
   background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/kawhi1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
-#allLakers {
+#allLakersImg {
   background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/lakers1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
-#allCeltics {
+#allCelticsImg {
   background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("../images/garnett1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 
