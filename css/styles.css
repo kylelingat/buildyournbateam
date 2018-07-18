@@ -1,6 +1,7 @@
 body {
      margin: 0;
      padding: 0;
+     user-select: none;
 }
 
 #header {
@@ -31,7 +32,6 @@ body {
 .modeSelector, #modernImg, #allTimeImg, #warriorsImg, #allDefenseImg, #allLakersImg, #allCelticsImg {
   height: 400px;
   position: relative;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -55,13 +55,39 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  cursor: pointer;
 }
 
 .modeSelector .text {
-  background-color: #4CAF50;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.modernText {
+  background-color: #006BB6;
+}
+
+.allTimeText {
+  background-color: #CE1141;
+}
+
+.warriorsText {
+  background-color: #002F6C;
+}
+
+.defensiveText {
+  background-color: #000000;
+}
+
+.lakersText {
+  background-color: #552583;
+
+}
+
+.celticsText {
+  background-color: #007A33;
 }
 
 .modeSelector:hover #modernImg{
@@ -139,5 +165,9 @@ body {
 @media(max-width: 768px){
   #gridContainer {
     grid-template-columns: 1fr;
+  }
+
+  .modeSelector, #modernImg, #allTimeImg, #warriorsImg, #allDefenseImg, #allLakersImg, #allCelticsImg {
+    height: 250px;
   }
 }
