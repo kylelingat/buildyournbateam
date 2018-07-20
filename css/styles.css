@@ -218,7 +218,7 @@ body {
 }
 
 .playerCard {
-  border-bottom: 1px solid black
+  margin-bottom: 2px;
 }
 
 .accordion {
@@ -235,7 +235,7 @@ body {
 }
 
 .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: #C0C0C0;
 }
 
 .panel {
@@ -243,6 +243,22 @@ body {
     display: block;
     background-color: white;
     overflow: hidden;
+}
+
+.rosterItem {
+  border-bottom: 1px solid black;
+}
+
+.teamColorVert {
+  height: 70px;
+  width: 10px;
+  background-color: red;
+}
+
+.playerIcon img {
+  border-radius: 50%;
+  height: 100px;
+  border: 1px solid black;
 }
 
 @media(max-width: 768px){
