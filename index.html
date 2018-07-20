@@ -7,6 +7,7 @@
     <link href="./css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Build your NBA Team</title>
@@ -16,46 +17,46 @@
 
   <div id="header"><h1>BUILD YOUR NBA TEAM</h1></div>
   <div id="gridContainer">
-    <div id="modern" class="modeSelector" onclick="selectMode(modern)">
+    <div id="modern" class="modeSelector">
       <div id="modernImg"></div>
       <h1>BUILD A TOP MODERN TEAM WITH $15</h1>
       <div class="middle">
-        <div class="text modernText">START</div>
+        <div id="modernSelector" class="text modernText" onclick="selectMode(modern)">START</div>
       </div>
     </div>
-    <div id="allTime" class="modeSelector" onclick="selectMode(this)">
+    <div id="allTime" class="modeSelector">
       <div id="allTimeImg"></div>
       <h1>BUILD AN ALL-TIME NBA TEAM WITH $15</h1>
       <div class="middle">
-        <div class="text allTimeText">START</div>
+        <div id="allTimeSelector" class="text allTimeText">START</div>
       </div>
     </div>
-    <div id="warriors" class="modeSelector" onclick="selectMode(this)">
+    <div id="warriors" class="modeSelector">
       <div id="warriorsImg"></div>
       <h1>BUILD A TEAM TO BEAT THE WARRIORS WITH $15</h1>
       <div class="middle">
-        <div class="text warriorsText">START</div>
+        <div id="warriorsSelector" class="text warriorsText">START</div>
       </div>
     </div>
-    <div id="allDefense" class="modeSelector" onclick="selectMode(this)">
+    <div id="allDefense" class="modeSelector">
       <div id="allDefenseImg"></div>
       <h1>BUILD YOUR ALL-TIME DEFENSIVE TEAM WITH $15</h1>
       <div class="middle">
-        <div class="text defensiveText">START</div>
+        <div id="allDefenseSelector" class="text defensiveText" onclick="selectMode(allDefense)">START</div>
       </div>
     </div>
-    <div id="allLakers" class="modeSelector" onclick="selectMode(this)">
+    <div id="allLakers" class="modeSelector">
       <div id="allLakersImg"></div>
       <h1>BUILD AN ALL-TIME LAKERS TEAM WITH $15</h1>
       <div class="middle">
-        <div class="text lakersText">START</div>
+        <div id="allLakersSelector" class="text lakersText">START</div>
       </div>
     </div>
-    <div id="allCeltics" class="modeSelector" onclick="selectMode(this)">
+    <div id="allCeltics" class="modeSelector">
       <div id="allCelticsImg"></div>
       <h1>BUILD AN ALL-TIME CELTICS TEAM WITH $15</h1>
       <div class="middle">
-        <div class="text celticsText">START</div>
+        <div id="allCelticsSelector" class="text celticsText">START</div>
       </div>
     </div>
   </div>

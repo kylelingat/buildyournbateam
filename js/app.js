@@ -9,4 +9,9 @@ var gameModes = [document.getElementById('modern'),
 
 
 function selectMode(mode){
+  for (var i = 0; i < gameModes.length; i++) {
+      gameModes[i].style.opacity = "0.5";
+      gameModes[i].style.height = "0px";
+}
+
 }
