@@ -47,6 +47,7 @@ body {
   height: 300px;
   position: relative;
   transition: 0.7s;
+  cursor: pointer;
 }
 
 
@@ -69,7 +70,6 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  cursor: pointer;
 }
 
 .modeSelector .text {
@@ -79,31 +79,6 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: bolder;
   letter-spacing: 3px;
-}
-
-.modernText {
-  background-color: #006BB6;
-}
-
-.allTimeText {
-  background-color: #CE1141;
-}
-
-.warriorsText {
-  background-color: #002F6C;
-}
-
-.defensiveText {
-  background-color: #000000;
-}
-
-.lakersText {
-  background-color: #552583;
-
-}
-
-.celticsText {
-  background-color: #007A33;
 }
 
 .modeSelector:hover #modernImg{
