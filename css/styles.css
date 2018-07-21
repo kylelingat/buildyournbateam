@@ -196,17 +196,19 @@ body {
   background-color: #A9A9A9;
 }
 
+.classBio h1 {
+  font-size: 17px;
+}
+
 .classBio {
-  height: 100px;
   padding: 5px;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 5px;
+  font-family: 'Arial', sans-serif;
   font-size: 17px;
   background-color: #D3D3D3
 }
 
-.currentBalance {
-  height: 100px;
+
+.currentBalance  {
   padding: 5px;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
@@ -218,7 +220,11 @@ body {
 }
 
 .playerCard {
-  margin-bottom: 2px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  cursor: pointer;
+  transition: 0.6s;
 }
 
 .accordion {
@@ -249,16 +255,36 @@ body {
   border-bottom: 1px solid black;
 }
 
-.teamColorVert {
-  height: 70px;
-  width: 10px;
-  background-color: red;
+.playerIcon {
+  height: 150px;
+  width: 150px;
 }
 
 .playerIcon img {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 130px;
+  width: 130px;
+  object-fit: cover;
   border-radius: 50%;
-  height: 100px;
-  border: 1px solid black;
+  background-color: #eee;
+}
+
+.playerText h1 {
+  font-family: 'Titillium Web';
+  font-weight:900;
+  letter-spacing: -2px;
+  font-style: italic;
+}
+
+.playerText h2 {
+  font-family: 'Titillium Web';
+  font-weight: 800;
+}
+
+.playerText h3 {
+  font-family: 'Titillium Web';
+  font-weight: 600;
 }
 
 @media(max-width: 768px){
@@ -266,6 +292,18 @@ body {
     grid-template-columns: 1fr;
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .playerCard {
+    grid-template-columns: 100%;
+  }
+
+  .playerIcon {
+    margin: auto;
+  }
+
+  .playerText {
+    text-align: center;
   }
 
   .modeSelector, #modernImg, #allTimeImg, #warriorsImg, #allDefenseImg, #allLakersImg, #allCelticsImg {

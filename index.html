@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/playerStyles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Build your NBA Team</title>
@@ -16,121 +18,294 @@
 <body>
 
     <h1 id="buildTeamText">BUILD YOUR NBA TEAM</h1>
-  <div id="gridContainer" class="animated fadeIn">
-    <div id="modern" class="modeSelector">
-      <div id="modernImg"></div>
-      <h1>BUILD A TOP MODERN TEAM WITH $15</h1>
-      <div class="middle">
-        <div id="modernSelector" class="text modernText" onclick="selectMode(modern)">START</div>
-      </div>
-    </div>
-    <div id="allTime" class="modeSelector">
-      <div id="allTimeImg"></div>
-      <h1>BUILD AN ALL-TIME NBA TEAM WITH $15</h1>
-      <div class="middle">
-        <div id="allTimeSelector" class="text allTimeText">START</div>
-      </div>
-    </div>
-    <div id="warriors" class="modeSelector">
-      <div id="warriorsImg"></div>
-      <h1>BUILD A TEAM TO BEAT THE WARRIORS WITH $15</h1>
-      <div class="middle">
-        <div id="warriorsSelector" class="text warriorsText">START</div>
-      </div>
-    </div>
-    <div id="allDefense" class="modeSelector">
-      <div id="allDefenseImg"></div>
-      <h1>BUILD YOUR ALL-TIME DEFENSIVE TEAM WITH $15</h1>
-      <div class="middle">
-        <div id="allDefenseSelector" class="text defensiveText" onclick="selectMode(allDefense)">START</div>
-      </div>
-    </div>
-    <div id="allLakers" class="modeSelector">
-      <div id="allLakersImg"></div>
-      <h1>BUILD AN ALL-TIME LAKERS TEAM WITH $15</h1>
-      <div class="middle">
-        <div id="allLakersSelector" class="text lakersText">START</div>
-      </div>
-    </div>
-    <div id="allCeltics" class="modeSelector">
-      <div id="allCelticsImg"></div>
-      <h1>BUILD AN ALL-TIME CELTICS TEAM WITH $15</h1>
-      <div class="middle">
-        <div id="allCelticsSelector" class="text celticsText">START</div>
-      </div>
-    </div>
-  </div>
-  <div id="modernContainer" class="animated fadeIn">
-    <!-- <div id="modernImgHeader"></div> -->
-    <div class="classBio">
-      <p>You have $15 to spend on creating a top contending modern NBA team! Use your money wisely</p>
-    </div>
-    <div class="currentBalance">
-      <p>Current Balance: $15</p>
-    </div>
-    <div id="modernDraft">
-      <button class="accordion">$5</button>
-      <div class="panel">
-        <div class="playerCard">
-          <div class="teamColorVert"></div>
-          <div class="playerIcon"><img src="images/rwhs.png" alt=""></div>
+    <div id="gridContainer" class="animated fadeIn">
+        <div id="modern" class="modeSelector">
+            <div id="modernImg"></div>
+            <h1>BUILD A TOP MODERN TEAM WITH $15</h1>
+            <div class="middle">
+                <div id="modernSelector" class="text modernText" onclick="selectMode(modern)">START</div>
+            </div>
         </div>
-        <div class="playerCard">
-          <div class="teamColorVert"></div>
+        <div id="allTime" class="modeSelector">
+            <div id="allTimeImg"></div>
+            <h1>BUILD AN ALL-TIME NBA TEAM WITH $15</h1>
+            <div class="middle">
+                <div id="allTimeSelector" class="text allTimeText">START</div>
+            </div>
         </div>
-        <div class="playerCard">
-          <div class="teamColorVert"></div>
+        <div id="warriors" class="modeSelector">
+            <div id="warriorsImg"></div>
+            <h1>BUILD A TEAM TO BEAT THE WARRIORS WITH $15</h1>
+            <div class="middle">
+                <div id="warriorsSelector" class="text warriorsText">START</div>
+            </div>
         </div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-      </div>
-
-      <button class="accordion">$4</button>
-      <div class="panel">
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-      </div>
-
-      <button class="accordion">$3</button>
-      <div class="panel">
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-      </div>
-
-      <button class="accordion">$2</button>
-      <div class="panel">
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-      </div>
-
-      <button class="accordion">$1</button>
-      <div class="panel">
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-        <div class="playerCard">s</div>
-      </div>
+        <div id="allDefense" class="modeSelector">
+            <div id="allDefenseImg"></div>
+            <h1>BUILD YOUR ALL-TIME DEFENSIVE TEAM WITH $15</h1>
+            <div class="middle">
+                <div id="allDefenseSelector" class="text defensiveText" onclick="selectMode(allDefense)">START</div>
+            </div>
+        </div>
+        <div id="allLakers" class="modeSelector">
+            <div id="allLakersImg"></div>
+            <h1>BUILD AN ALL-TIME LAKERS TEAM WITH $15</h1>
+            <div class="middle">
+                <div id="allLakersSelector" class="text lakersText">START</div>
+            </div>
+        </div>
+        <div id="allCeltics" class="modeSelector">
+            <div id="allCelticsImg"></div>
+            <h1>BUILD AN ALL-TIME CELTICS TEAM WITH $15</h1>
+            <div class="middle">
+                <div id="allCelticsSelector" class="text celticsText">START</div>
+            </div>
+        </div>
     </div>
-    <div class="teamRoster">
-      <div class="rosterItem">s</div>
-      <div class="rosterItem">s</div>
-      <div class="rosterItem">s</div>
-      <div class="rosterItem">s</div>
-      <div class="rosterItem">s</div>
-    </div>
-  </div>  <div id="footer"><h1>CREDITS</h1></div>
+    <div id="modernContainer" class="animated fadeIn">
+        <div class="classBio">
+            <h1>Directions:</h1>
+            <p>You have $15 to spend on creating a top contending modern NBA team! To select a player, click on a desired player then choose which position you want him to play.</p>
+        </div>
+        <div class="currentBalance">
+            <p>Current Balance: $15</p>
+        </div>
+        <div id="modernDraft">
+            <button class="accordion">$5</button>
+            <div class="panel">
+                <div id="westBrook" class="playerCard">
+                    <div class="playerIcon">
+                        <img src="./images/rwhs.png" alt="">
+                    </div>
+                    <div class="playerText">
+                        <h1>RUSSELL WESTBROOK</h1>
+                        <h2>PG | OKLAHOMA CITY THUNDER</h2>
+                        <h3>ALL-AROUND SUPERSTAR</h3>
+                    </div>
+                </div>
+                <div id="harden" class="playerCard">
+                    <div class="playerIcon"><img src="./images/hardenhs.png" alt=""></div>
+                    <div class="playerText">
+                        <h1>JAMES HARDEN</h1>
+                        <h2>SG | HOUSTON ROCKETS</h2>
+                        <h3>OFFENSIVE SUPERSTAR</h3>
+                    </div>
+                </div>
+                <div id="lebron" class="playerCard">
+                    <div class="playerIcon"><img src="./images/lebronhs.png" alt=""></div>
+                    <div class="playerText">
+                        <h1>LEBRON JAMES</h1>
+                        <h2>SF | LOS ANGELES LAKERS</h2>
+                        <h3>ONE OF A KIND</h3>
+                    </div>
+                </div>
+                <div id="snake" class="playerCard">
+                    <div class="playerIcon"><img src="./images/kdhs.png" alt=""></div>
+                    <div class="playerText">
+                        <h1>KEVIN DURANT</h1>
+                        <h2>SF | GOLDEN STATE WARRIORS</h2>
+                        <h3>TWO WAY SUPER-STAR</h3>
+                    </div>
+                </div>
+                <div id="ad" class="playerCard">
+                    <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                    <div class="playerText">
+                        <h1>ANTHONY DAVIS</h1>
+                        <h2>PF | NEW ORLEANS PELICANS</h2>
+                        <h3>TWO WAY SUPER-STAR</h3>
+                    </div>
+                </div>
+            </div>
 
-  <script src="js/app.js"></script>
+            <button class="accordion">$4</button>
+            <div class="panel">
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+            </div>
+
+            <button class="accordion">$3</button>
+            <div class="panel">
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+            </div>
+
+            <button class="accordion">$2</button>
+            <div class="panel">
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+            </div>
+
+            <button class="accordion">$1</button>
+            <div class="panel">
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+              <div id="ad" class="playerCard">
+                  <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
+                  <div class="playerText">
+                      <h1>ANTHONY DAVIS</h1>
+                      <h2>PF | NEW ORLEANS PELICANS</h2>
+                      <h3>TWO WAY SUPER-STAR</h3>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="teamRoster">
+            <div class="rosterItem">s</div>
+            <div class="rosterItem">s</div>
+            <div class="rosterItem">s</div>
+            <div class="rosterItem">s</div>
+            <div class="rosterItem">s</div>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>CREDITS</h1>
+    </div>
+
+    <script src="js/app.js"></script>
 </body>
 
 </html>

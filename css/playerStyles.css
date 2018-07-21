@@ -1,0 +1,44 @@
+#westBrook {
+  border-left: 10px solid #007AC1;
+}
+
+#westBrook:hover {
+  background-color: #EF3B24;
+  color: white;
+}
+
+#harden {
+  border-left: 10px solid #CE1141;
+}
+
+#harden:hover {
+  background-color: #041E42;
+  color: white;
+}
+
+#lebron {
+  border-left: 10px solid #FDB927;
+}
+
+#lebron:hover {
+  background-color: #552583;
+  color: white;
+}
+
+#snake {
+  border-left: 10px solid #006BB6;
+}
+
+#snake:hover {
+  background-color: #FDB927;
+  color: white;
+}
+
+#ad {
+  border-left: 10px solid #0C2340;
+}
+
+#ad:hover {
+  background-color: #C8102E;
+  color: white;
+}
