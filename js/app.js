@@ -9,11 +9,7 @@ var gameModes = [document.getElementById('modern'),
 var inMode = 0;
 var playerSelected = 0;
 
-$(".playerCard").click(function() {
-    $('html, body').animate({
-        scrollTop: $(".teamRoster").offset().top
-    }, 700);
-});
+
 
 function selectMode(mode) {
 
@@ -93,18 +89,25 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
+$('.playerCard').click(function() {
+    $('html, body').animate({
+        scrollTop: $(".teamRoster").offset().top
+    }, 700);
+});
+
 function currentlySelected(player){
-  console.log(player)
-  $( "p" ).addClass( "selected" );
+  // $('.playerCard').prop('onclick',null).off('click');
   $('.playerCard').each(function(i, obj) {
     if(this.id != player.id){
       $(this).css("opacity", "0.2");
     }
 });
-  $(player).find(".playerIcon").clone().appendTo("#currentlySelectedTemp")
-  var currentlySelectedPlayerText = $(player).find(".playerText > h1")[0].innerHTML
-  var t = document.createTextNode(currentlySelectedPlayerText);
-  document.getElementById("currentlySelectedTemp").appendChild(t);
+  // var currentlySelectedPlayerText = $(player).find(".playerText > h1")[0].innerHTML
+  // $("#tempText > h1").text(`YOU HAVE SELECTED ${currentlySelectedPlayerText}`);
+  // $(player).find(".playerIcon").clone().appendTo("#selectedImg");
+  // $("#selectPosition > h1").text('SELECT A POSITION TO CONTINUE');
+  // var tempBg = $(player).css('border-left-color');
+  // $('#currentlySelectedTemp').css('background-color', tempBg)
 }
 
 $( ".rosterItem" ).hover(

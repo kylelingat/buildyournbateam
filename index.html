@@ -84,7 +84,7 @@
                         <h3>ALL-AROUND SUPERSTAR</h3>
                     </div>
                 </div>
-                <div id="harden" class="playerCard">
+                <div id="harden" class="playerCard" onclick="currentlySelected(harden)">
                     <div class="playerIcon"><img src="./images/hardenhs.png" alt=""></div>
                     <div class="playerText">
                         <h1>JAMES HARDEN</h1>
@@ -286,7 +286,7 @@
                       <h3>ALL-AROUND STAR</h3>
                   </div>
               </div>
-              <div id="horford" class="playerCard">
+              <div id="horford" class="playerCard" onclick="currentlySelected(horford)">
                   <div class="playerIcon"><img src="./images/horfordhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>AL HORFORD</h1>
@@ -304,11 +304,17 @@
             <div class="rosterItem"><h4>POWER FORWARD</h4></div>
             <div class="rosterItem"><h4>CENTER</h4></div>
         </div>
+
+        <div id="currentlySelectedTemp">
+          <div id="tempText"><h1></h1></div>
+          <div id="selectedImg"></div>
+          <div id="selectPosition"><h1></h1></div>
+        </div>
     </div>
+
     <div id="footer">
         <h1>CREDITS</h1>
     </div>
-    <div id="currentlySelectedTemp"></div>
 
     <script src="js/app.js"></script>
 </body>
