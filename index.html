@@ -68,12 +68,13 @@
             <p>You have $15 to spend on creating a top contending modern NBA team! To select a player, click on a desired player then choose which position you want him to play.</p>
         </div>
         <div class="currentBalance">
-            <p>Current Balance: $15</p>
+            <h1>Current Balance:</h1>
+            <p>$15</p>
         </div>
         <div id="modernDraft">
-            <button class="accordion">$5</button>
+            <button class="accordion"><h1>$5</h1></button>
             <div class="panel">
-                <div id="curry" class="playerCard">
+                <div id="curry" class="playerCard" onclick="currentlySelected(curry)" >
                     <div class="playerIcon">
                         <img src="./images/curryhs.png" alt="">
                     </div>
@@ -117,7 +118,7 @@
                 </div>
             </div>
 
-            <button class="accordion">$4</button>
+            <button class="accordion"><h1>$4</h1></button>
             <div class="panel">
               <div id="westBrook" class="playerCard">
                   <div class="playerIcon">
@@ -163,7 +164,7 @@
               </div>
             </div>
 
-            <button class="accordion">$3</button>
+            <button class="accordion"><h1>$3</h1></button>
             <div class="panel">
               <div id="irving" class="playerCard">
                   <div class="playerIcon"><img src="./images/irvinghs.png" alt=""></div>
@@ -207,7 +208,7 @@
               </div>
             </div>
 
-            <button class="accordion">$2</button>
+            <button class="accordion"><h1>$2</h1></button>
             <div class="panel">
               <div id="lillard" class="playerCard">
                   <div class="playerIcon"><img src="./images/lillardhs.png" alt=""></div>
@@ -251,7 +252,7 @@
               </div>
             </div>
 
-            <button class="accordion">$1</button>
+            <button class="accordion"><h1>$1</h1></button>
             <div class="panel">
               <div id="cp3" class="playerCard">
                   <div class="playerIcon"><img src="./images/cp3hs.png" alt=""></div>
@@ -296,16 +297,18 @@
             </div>
         </div>
         <div class="teamRoster">
-            <div class="rosterItem">s</div>
-            <div class="rosterItem">s</div>
-            <div class="rosterItem">s</div>
-            <div class="rosterItem">s</div>
-            <div class="rosterItem">s</div>
+            <button class="rosterHeading"><h1>YOUR ROSTER</h1></button>
+            <div class="rosterItem"><h4>POINT GUARD</h4></div>
+            <div class="rosterItem"><h4>SHOOTING GUARD</h4></div>
+            <div class="rosterItem"><h4>SMALL FORWARD</h4></div>
+            <div class="rosterItem"><h4>POWER FORWARD</h4></div>
+            <div class="rosterItem"><h4>CENTER</h4></div>
         </div>
     </div>
     <div id="footer">
         <h1>CREDITS</h1>
     </div>
+    <div id="currentlySelectedTemp"></div>
 
     <script src="js/app.js"></script>
 </body>

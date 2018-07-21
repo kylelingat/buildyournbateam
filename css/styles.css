@@ -74,7 +74,7 @@ body {
 
 .modeSelector .text {
   color: white;
-  font-size: 16px;
+  font-size: 36px;
   padding: 16px 32px;
   font-family: 'Lato', sans-serif;
   font-weight: bolder;
@@ -182,31 +182,34 @@ body {
   background-color: #D3D3D3
 }
 
+.currentBalance h1 {
+  font-size: 17px;
+}
 
 .currentBalance  {
   padding: 5px;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 5px;
+  font-family: 'Arial', sans-serif;
   font-size: 17px;
   background-color: #D3D3D3
 }
 
 #modernDraft {
+  background-color: #D3D3D3;
 }
 
 .playerCard {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 30% 70%;
   cursor: pointer;
   transition: 0.6s;
+  background-color: white;
 }
 
 .accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
@@ -215,34 +218,52 @@ body {
     transition: 0.4s;
 }
 
+.rosterHeading {
+  background-color: #eee;
+  color: #444;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
 .active, .accordion:hover {
     background-color: #C0C0C0;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid black; */
 }
 
 .panel {
     display: block;
-    background-color: white;
+    background-color: #D3D3D3;
     overflow: hidden;
 }
 
 .rosterItem {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #A9A9A9;
+}
+
+.playerText {
 }
 
 .playerIcon {
   height: 150px;
-  width: 150px;
+  width: 278px;
+  margin: auto;
 }
 
 .playerIcon img {
-  margin-top: 20px;
-  margin-left: 10px;
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: auto;
   object-fit: cover;
   border-radius: 50%;
   background-color: #eee;
 }
+
+
 
 .playerText h1 {
   font-family: 'Titillium Web';
@@ -261,6 +282,44 @@ body {
   font-weight: 600;
 }
 
+@media(max-width: 1480px){
+  .playerCard {
+    grid-template-columns: 100%;
+  }
+
+  .playerIcon {
+    margin: auto;
+  }
+
+  .playerText {
+    text-align: center;
+  }
+}
+
+.teamRoster {
+  background-color: #D3D3D3;
+}
+
+.rosterItem {
+  padding: 40px;
+}
+.rosterItem h4 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Titillium Web';
+  font-weight: 600;
+  color: #696969;
+  margin: 0px;
+}
+
+#currentlySelectedTemp {
+  width: 600px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -300px;
+}
+
 @media(max-width: 768px){
   #gridContainer, #modernContainer {
     grid-template-columns: 1fr;
@@ -273,7 +332,7 @@ body {
   }
 
   .playerIcon {
-    margin: auto;
+    margin-top: 20px;
   }
 
   .playerText {

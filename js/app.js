@@ -7,11 +7,18 @@ var gameModes = [document.getElementById('modern'),
 ];
 
 var inMode = 0;
+var playerSelected = 0;
+
+$(".playerCard").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".teamRoster").offset().top
+    }, 700);
+});
 
 function selectMode(mode) {
 
     inMode = 1;
-    $('#buildTeamText').text('CLICK TO GO BACK');
+    $('#buildTeamText').text('CLICK HERE TO RETURN');
     $('#buildTeamText').css('cursor', 'pointer');
 
     $.fn.extend({
@@ -63,6 +70,7 @@ function selectMode(mode) {
         inMode = 0;
         $(this).css("background-color", "#17408B");
         $(this).text("BUILD YOUR NBA TEAM");
+        $('#buildTeamText').css('cursor', 'default');
         $('#gridContainer').css('display', 'grid');
         $('#modernContainer').css('display', 'none');
 
@@ -84,3 +92,31 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+function currentlySelected(player){
+  console.log(player)
+  $( "p" ).addClass( "selected" );
+  $('.playerCard').each(function(i, obj) {
+    if(this.id != player.id){
+      $(this).css("opacity", "0.2");
+    }
+});
+  $(player).find(".playerIcon").clone().appendTo("#currentlySelectedTemp")
+  var currentlySelectedPlayerText = $(player).find(".playerText > h1")[0].innerHTML
+  var t = document.createTextNode(currentlySelectedPlayerText);
+  document.getElementById("currentlySelectedTemp").appendChild(t);
+}
+
+$( ".rosterItem" ).hover(
+  function() {
+    if(playerSelected == 1){
+    $( this ).css( "cursor", "pointer" );
+    $( this ).css( "background-color", "white" );
+  }
+  }, function() {
+    if(playerSelected == 1){
+    $( this ).css( "hover", "none" );
+    $( this ).css( "background-color", "#D3D3D3" );
+  }
+  }
+);
