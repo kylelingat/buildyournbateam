@@ -82,32 +82,32 @@ body {
 }
 
 .modeSelector:hover #modernImg{
-  filter: blur(2px);
+  filter: blur(3px);
   transform: scale(1.1);
 }
 
 .modeSelector:hover #allTimeImg{
-  filter: blur(2px);
+  filter: blur(3px);
   transform: scale(1.1);
 }
 
 .modeSelector:hover #warriorsImg{
-  filter: blur(2px);
+  filter: blur(3px);
   transform: scale(1.1);
 }
 
 .modeSelector:hover #allLakersImg{
-  filter: blur(2px);
+  filter: blur(3px);
   transform: scale(1.1);
 }
 
 .modeSelector:hover #allDefenseImg{
-  filter: blur(2px);
+  filter: blur(3px);
   transform: scale(1.1);
 }
 
 .modeSelector:hover #allCelticsImg{
-  filter: blur(2px);
+  filter: blur(3px);
   transform: scale(1.1);
 }
 

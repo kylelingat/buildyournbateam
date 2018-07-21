@@ -1,12 +1,11 @@
-#westBrook {
-  border-left: 10px solid #007AC1;
+#curry {
+  border-left: 10px solid #006BB6;
 }
 
-#westBrook:hover {
-  background-color: #EF3B24;
+#curry:hover {
+  background-color: #FDB927;
   color: white;
 }
-
 #harden {
   border-left: 10px solid #CE1141;
 }
@@ -40,5 +39,196 @@
 
 #ad:hover {
   background-color: #C8102E;
+  color: white;
+}
+
+#westBrook {
+  border-left: 10px solid #007AC1;
+}
+
+#westBrook:hover {
+  background-color: #EF3B24;
+  color: white;
+}
+
+#dd {
+  border-left: 10px solid #C4CED4;
+}
+
+#dd:hover {
+  background-color: #000000;
+  color: white;
+}
+
+#giannis {
+  border-left: 10px solid #00471B;
+}
+
+#giannis:hover {
+  background-color: #EEE1C6;
+  color: white;
+}
+
+#porzingis {
+  border-left: 10px solid #006BB6;
+}
+
+#porzingis:hover {
+  background-color: #F58426;
+  color: white;
+}
+
+#cousins {
+  border-left: 10px solid #006BB6;
+}
+
+#cousins:hover {
+  background-color: #FDB927;
+  color: white;
+}
+
+#irving {
+  border-left: 10px solid #007A33;
+}
+
+#irving:hover {
+  background-color: #BA9653;
+  color: white;
+}
+
+#curry {
+  border-left: 10px solid #006BB6;
+}
+
+#curry:hover {
+  background-color: #FDB927;
+  color: white;
+}
+#butler {
+  border-left: 10px solid #0C2340;
+}
+
+#butler:hover {
+  background-color: #236192;
+  color: white;
+}
+
+#lebron {
+  border-left: 10px solid #FDB927;
+}
+
+#lebron:hover {
+  background-color: #552583;
+  color: white;
+}
+
+#kawhi {
+  border-left: 10px solid #CE1141;
+}
+
+#kawhi:hover {
+  background-color: #000000;
+  color: white;
+}
+
+#lma {
+  border-left: 10px solid #C4CED4;
+}
+
+#lma:hover {
+  background-color: #000000;
+  color: white;
+}
+#embiid {
+  border-left: 10px solid #006BB6;
+}
+
+#embiid:hover {
+  background-color: #ED174C;
+  color: white;
+}
+
+#lillard {
+  border-left: 10px solid #E03A3E;
+}
+
+#lillard:hover {
+  background-color: #000000;
+  color: white;
+}
+
+#klay {
+  border-left: 10px solid #006BB6;
+}
+
+#klay:hover {
+  background-color: #FDB927;
+  color: white;
+}
+
+#pg13 {
+  border-left: 10px solid #007AC1;
+}
+
+#pg13:hover {
+  background-color: #EF3B24;
+  color: white;
+}
+
+#blake {
+  border-left: 10px solid #C8102E;
+}
+
+#blake:hover {
+  background-color: #006BB6;
+  color: white;
+}
+
+#gobert {
+  border-left: 10px solid #002B5C;
+}
+
+#gobert:hover {
+  background-color: #00471B;
+  color: white;
+}
+#cp3 {
+  border-left: 10px solid #CE1141;
+}
+
+#cp3:hover {
+  background-color: #041E42;
+  color: white;
+}
+#oladipo {
+  border-left: 10px solid #002D62;
+}
+
+#oladipo:hover {
+  background-color: #FDBB30;
+  color: white;
+}
+#hayward {
+  border-left: 10px solid #007A33;
+}
+
+#hayward:hover {
+  background-color: #BA9653;
+  color: white;
+}
+#green {
+  border-left: 10px solid #006BB6;
+}
+
+#green:hover {
+  background-color: #FDB927;
+  color: white;
+}
+#horford {
+  border-left: 10px solid #007A33;
+}
+
+#horford:hover {
+  background-color: #BA9653;
   color: white;
 }
