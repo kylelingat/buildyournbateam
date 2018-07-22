@@ -92,7 +92,7 @@
                         <h3>OFFENSIVE SUPERSTAR</h3>
                     </div>
                 </div>
-                <div id="lebron" class="playerCard">
+                <div id="lebron" class="playerCard" onclick="currentlySelected(lebron)">
                     <div class="playerIcon"><img src="./images/lebronhs.png" alt=""></div>
                     <div class="playerText">
                         <h1>LEBRON JAMES</h1>
@@ -270,7 +270,7 @@
                       <h3>OFFENSIVE STAR</h3>
                   </div>
               </div>
-              <div id="hayward" class="playerCard">
+              <div id="hayward" class="playerCard" onclick="currentlySelected(hayward)">
                   <div class="playerIcon"><img src="./images/haywardhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>GORDON HAYWARD</h1>
@@ -278,7 +278,7 @@
                       <h3>OFFENSIVE STAR</h3>
                   </div>
               </div>
-              <div id="green" class="playerCard">
+              <div id="green" class="playerCard" onclick="currentlySelected(green)">
                   <div class="playerIcon"><img src="./images/draymondhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>DRAYMOND GREEN</h1>
@@ -298,17 +298,39 @@
         </div>
         <div class="teamRoster">
             <button class="rosterHeading"><h1>YOUR ROSTER</h1></button>
-            <div class="rosterItem"><h4>POINT GUARD</h4></div>
-            <div class="rosterItem"><h4>SHOOTING GUARD</h4></div>
-            <div class="rosterItem"><h4>SMALL FORWARD</h4></div>
-            <div class="rosterItem"><h4>POWER FORWARD</h4></div>
-            <div class="rosterItem"><h4>CENTER</h4></div>
+            <div class="rosterItem">
+              <h4>POINT GUARD</h4>
+              <div id="tempText"><h1></h1></div>
+              <div id="permText"><h2></h2></div>
+              <div id="selectedImg"></div>
+            </div>
+            <div class="rosterItem">
+              <h4>SHOOTING GUARD</h4>
+              <div id="tempText"><h1></h1></div>
+              <div id="permText"><h2></h2></div>
+              <div id="selectedImg"></div>
+            </div>
+            <div class="rosterItem">
+              <h4>SMALL FORWARD</h4>
+              <div id="tempText"><h1></h1></div>
+              <div id="permText"><h2></h2></div>
+              <div id="selectedImg"></div>
+            </div>
+            <div class="rosterItem">
+              <h4>POWER FORWARD</h4>
+              <div id="tempText"><h1></h1></div>
+              <div id="permText"><h2></h2></div>
+              <div id="selectedImg"></div>
+            </div>
+            <div class="rosterItem">
+              <h4>CENTER</h4>
+              <div id="tempText"><h1></h1></div>
+              <div id="permText"><h2></h2></div>
+              <div id="selectedImg"></div>
+            </div>
         </div>
 
         <div id="currentlySelectedTemp">
-          <div id="tempText"><h1></h1></div>
-          <div id="selectedImg"></div>
-          <div id="selectPosition"><h1></h1></div>
         </div>
     </div>
 

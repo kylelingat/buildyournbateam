@@ -228,9 +228,8 @@ body {
   font-size: 15px;
 }
 
-.active, .accordion:hover {
+ .accordion:hover {
     background-color: #C0C0C0;
-    margin-bottom: 10px;
     /* border-bottom: 1px solid black; */
 }
 

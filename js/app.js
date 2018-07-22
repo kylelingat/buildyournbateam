@@ -95,31 +95,51 @@ $('.playerCard').click(function() {
     }, 700);
 });
 
-function currentlySelected(player){
-  // $('.playerCard').prop('onclick',null).off('click');
-  $('.playerCard').each(function(i, obj) {
-    if(this.id != player.id){
-      $(this).css("opacity", "0.2");
-    }
-});
-  // var currentlySelectedPlayerText = $(player).find(".playerText > h1")[0].innerHTML
-  // $("#tempText > h1").text(`YOU HAVE SELECTED ${currentlySelectedPlayerText}`);
-  // $(player).find(".playerIcon").clone().appendTo("#selectedImg");
-  // $("#selectPosition > h1").text('SELECT A POSITION TO CONTINUE');
-  // var tempBg = $(player).css('border-left-color');
-  // $('#currentlySelectedTemp').css('background-color', tempBg)
-}
+function currentlySelected(player) {
+    console.log(player)
+    playerSelected = 1;
+    $('.playerCard').each(function(i, obj) {
+        if (this.id != player.id) {
+            $(this).css("opacity", "0.2");
+            $(this).click = null;
+        }
+    });
 
-$( ".rosterItem" ).hover(
-  function() {
-    if(playerSelected == 1){
-    $( this ).css( "cursor", "pointer" );
-    $( this ).css( "background-color", "white" );
-  }
-  }, function() {
-    if(playerSelected == 1){
-    $( this ).css( "hover", "none" );
-    $( this ).css( "background-color", "#D3D3D3" );
-  }
-  }
-);
+    var currentlySelectedPlayerText;
+    $(".rosterItem").hover(
+        function() {
+            if (playerSelected == 1) {
+                currentlySelectedPlayerText = $(player).find(".playerText > h1")[0].innerHTML;
+                console.log(currentlySelectedPlayerText)
+                var tempBg = $(player).css('border-left-color');
+                $(this).css("cursor", "pointer");
+                $(this).css('background-color', tempBg);
+                $(this).find('h4').hide();
+                $(this).find('h1').text(`${currentlySelectedPlayerText}`);
+            }
+        },
+        function() {
+            if (playerSelected == 1) {
+                $(this).css("hover", "none");
+                $(this).css("background-color", "#D3D3D3");
+                $(this).find('h4').show();
+                $(this).find('h1').text(` `);
+            }
+        }
+    );
+    $('.rosterItem').click(function() {
+        if (playerSelected == 1) {
+            $(this).find('h1').hide();
+            $(this).find('h4').remove();
+            $(this).find('h2').text(`${currentlySelectedPlayerText}`);
+            $(player).css("opacity", "0.2")
+            $('.playerCard').each(function(i, obj) {
+                if (this.id != player.id) {
+                    $(this).css("opacity", "1");
+                }
+            });
+            player = null;
+            playerSelected = 0;
+        }
+    });
+}
