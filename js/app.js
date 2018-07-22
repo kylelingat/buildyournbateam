@@ -94,9 +94,8 @@ $('.playerCard').click(function() {
         scrollTop: $(".teamRoster").offset().top
     }, 700);
 });
-
+let selectedPlayerCache;
 function currentlySelected(player) {
-    let selectedPlayerCache = []
     selectedPlayerCache = player;
     console.log(selectedPlayerCache);
     playerSelected = 1;
@@ -106,40 +105,58 @@ function currentlySelected(player) {
     //         $(this).click = null;
     //     }
     // });
-    //
-    console.log($(selectedPlayerCache).find(".playerText > h1"));
-    $('.rosterItem').click(function() {
-      if(playerSelected == 1){
-            $(this).find('h1').hide();
-            $(this).find('h4').remove();
-            $(this).find('#permText > h2').text($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
-          }
-        })
 
     $(".rosterItem").hover(
         function() {
-            if (playerSelected == 1) {
-                var tempBg = $(selectedPlayerCache).css('border-left-color');
+            if (playerSelected == 1 && typeof selectedPlayerCache !== "undefined" && !$(this).hasClass("rosterItemActive")) {
                 $(this).css("cursor", "pointer");
-                $(this).css('background-color', tempBg);
+                var borderLeft = $(selectedPlayerCache).css('border-left');
+                $(this).css('border-left', borderLeft)
+                $(this).css('background-color', "white")
                 $(this).find('h4').hide();
-                $(this).find('h1').text($(selectedPlayerCache).find(".playerText > h1")[0].innerHTML);
-                console.log(selectedPlayerCache)
+                $(this).find('h1').text($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
             }
         },
         function() {
-            if (playerSelected == 1) {
+            if (playerSelected == 1 && typeof selectedPlayerCache !== "undefined" && !$(this).hasClass("rosterItemActive")) {
                 $(this).css("hover", "none");
-                $(this).css("background-color", "#D3D3D3");
+                $(this).css("border-left", "none");
+                $(this).css('background-color', "#D3D3D3")
                 $(this).find('h4').show();
                 $(this).find('h1').text(` `);
             }
         }
     );
-    // $('.rosterItem').click(function() {
-    //     if (playerSelected == 1) {
-    //         $(this).find('h1').hide();
-    //         $(this).find('h4').remove();
+
+
+    $('.rosterItem').click(function() {
+      if(playerSelected == 1 && !$(this).hasClass("rosterItemActive")){
+            $(this).find('h1').hide();
+            $(this).find('h4').remove();
+            // $(this).find('.permText > h2').text($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
+            $(this).css("display", "grid");
+            $(this).css("margin-bottom", "10px");
+            $(selectedPlayerCache).find(".playerIcon").clone().appendTo(this);
+            $(selectedPlayerCache).find(".playerText").clone().appendTo(this);
+            $(this).find(".tempText").hide();
+            // var borderLeft = $(selectedPlayerCache).css('border-left');
+            // $(this).css('border-left', borderLeft)
+            $(selectedPlayerCache).hide();
+            $(this).addClass('rosterItemActive');
+            selectedPlayerCache = undefined;
+            // $('.playerCard').each(function(i, obj) {
+            //     if (this.id != player.id) {
+            //         $(this).css("opacity", "1");
+            //     }
+            // });
+            playerSelected = 0;
+          }
+        })
+
+    // // $('.rosterItem').click(function() {
+    // //     if (playerSelected == 1) {
+    // //         $(this).find('h1').hide();
+    // //         $(this).find('h4').remove();
     //         $(this).find('#permText > h2').append($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
     //         $(selectedPlayerCache).css("opacity", "0.2")
     //         $('.playerCard').each(function(i, obj) {

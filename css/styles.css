@@ -194,7 +194,7 @@ body {
 }
 
 #modernDraft {
-  background-color: #D3D3D3;
+  background-color: #eee;
 }
 
 .playerCard {
@@ -239,9 +239,7 @@ body {
     overflow: hidden;
 }
 
-.rosterItem {
-  border-bottom: 1px solid #A9A9A9;
-}
+
 
 .playerText {
 }
@@ -281,27 +279,25 @@ body {
   font-weight: 600;
 }
 
-@media(max-width: 1480px){
-  .playerCard {
-    grid-template-columns: 100%;
-  }
-
-  .playerIcon {
-    margin: auto;
-  }
-
-  .playerText {
-    text-align: center;
-  }
-}
-
 .teamRoster {
   background-color: #D3D3D3;
 }
 
 .rosterItem {
-  padding: 40px;
+  border-bottom: 1px solid #A9A9A9;
+  display: block;
+  grid-template-columns: 30% 70%;
+  transition: 0.6s;
 }
+
+.tempText h1, .permText h2 {
+  font-family: 'Titillium Web';
+  font-size: 30px;
+  font-weight:900;
+  letter-spacing: -2px;
+  font-style: italic;
+}
+
 .rosterItem h4 {
   text-align: center;
   font-size: 30px;
@@ -329,6 +325,9 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+.onRoster {
+  opacity: 0.2;
+}
 @media(max-width: 768px){
   #gridContainer, #modernContainer {
     grid-template-columns: 1fr;
@@ -336,7 +335,7 @@ body {
     margin-right: 0px;
   }
 
-  .playerCard {
+  .playerCard, .rosterItem {
     grid-template-columns: 100%;
   }
 
@@ -354,5 +353,19 @@ body {
 
   #buildTeamText , #footer h1 {
     font-size: 17px;
+  }
+}
+
+@media(max-width: 1480px){
+  .playerCard, .rosterItem {
+    grid-template-columns: 100%;
+  }
+
+  .playerIcon {
+    margin: auto;
+  }
+
+  .playerText {
+    text-align: center;
   }
 }
