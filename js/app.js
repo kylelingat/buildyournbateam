@@ -111,17 +111,15 @@ function currentlySelected(player) {
             if (playerSelected == 1 && typeof selectedPlayerCache !== "undefined" && !$(this).hasClass("rosterItemActive")) {
                 $(this).css("cursor", "pointer");
                 var borderLeft = $(selectedPlayerCache).css('border-left');
-                $(this).css('border-left', borderLeft)
-                $(this).css('background-color', "white")
+                $(this).css('border-left', borderLeft);
                 $(this).find('h4').hide();
                 $(this).find('h1').text($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
             }
         },
         function() {
             if (playerSelected == 1 && typeof selectedPlayerCache !== "undefined" && !$(this).hasClass("rosterItemActive")) {
-                $(this).css("hover", "none");
+                // $(this).css("hover", "none");
                 $(this).css("border-left", "none");
-                $(this).css('background-color', "#D3D3D3")
                 $(this).find('h4').show();
                 $(this).find('h1').text(` `);
             }
@@ -133,14 +131,14 @@ function currentlySelected(player) {
       if(playerSelected == 1 && !$(this).hasClass("rosterItemActive")){
             $(this).find('h1').hide();
             $(this).find('h4').remove();
-            // $(this).find('.permText > h2').text($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
             $(this).css("display", "grid");
             $(this).css("margin-bottom", "10px");
+            var classTemp = $(selectedPlayerCache).attr("id");
+            $(this).attr("id", classTemp);
+            $(this).addClass("white");
             $(selectedPlayerCache).find(".playerIcon").clone().appendTo(this);
             $(selectedPlayerCache).find(".playerText").clone().appendTo(this);
             $(this).find(".tempText").hide();
-            // var borderLeft = $(selectedPlayerCache).css('border-left');
-            // $(this).css('border-left', borderLeft)
             $(selectedPlayerCache).hide();
             $(this).addClass('rosterItemActive');
             selectedPlayerCache = undefined;
