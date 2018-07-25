@@ -68,12 +68,12 @@
             <p>You have $15 to spend on creating a top contending modern NBA team! To select a player, click on a desired player then choose which position you want him to play.</p>
         </div>
         <div class="currentBalance">
-            <h1>Your current balance is $15</h1>
+            <h1 id="actualBalance"></h1>
         </div>
         <div id="modernDraft">
             <button class="accordion"><h1>$5</h1></button>
             <div class="panel">
-                <div id="curry" class="playerCard" onclick="currentlySelected(curry)" >
+                <div id="curry" class="playerCard 5worth" onclick="currentlySelected(this)" >
                     <div class="playerIcon">
                         <img src="./images/curryhs.png" alt="">
                     </div>
@@ -83,7 +83,7 @@
                         <h3>ALL-AROUND SUPERSTAR</h3>
                     </div>
                 </div>
-                <div id="harden" class="playerCard" onclick="currentlySelected(harden)">
+                <div id="harden" class="playerCard 5worth" onclick="currentlySelected(this)">
                     <div class="playerIcon"><img src="./images/hardenhs.png" alt=""></div>
                     <div class="playerText">
                         <h1>JAMES HARDEN</h1>
@@ -91,7 +91,7 @@
                         <h3>OFFENSIVE SUPERSTAR</h3>
                     </div>
                 </div>
-                <div id="lebron" class="playerCard" onclick="currentlySelected(lebron)">
+                <div id="lebron" class="playerCard 5worth" onclick="currentlySelected(this)">
                     <div class="playerIcon"><img src="./images/lebronhs.png" alt=""></div>
                     <div class="playerText">
                         <h1>LEBRON JAMES</h1>
@@ -99,7 +99,7 @@
                         <h3>ONE OF A KIND</h3>
                     </div>
                 </div>
-                <div id="snake" class="playerCard" onclick="currentlySelected(snake)">
+                <div id="snake" class="playerCard 5worth" onclick="currentlySelected(this)">
                     <div class="playerIcon"><img src="./images/kdhs.png" alt=""></div>
                     <div class="playerText">
                         <h1>KEVIN DURANT</h1>
@@ -107,7 +107,7 @@
                         <h3>TWO WAY SUPERSTAR</h3>
                     </div>
                 </div>
-                <div id="ad" class="playerCard" onclick="currentlySelected(ad)">
+                <div id="ad" class="playerCard 5worth" onclick="currentlySelected(this)">
                     <div class="playerIcon"><img src="./images/adhs.png" alt=""></div>
                     <div class="playerText">
                         <h1>ANTHONY DAVIS</h1>
@@ -119,7 +119,7 @@
 
             <button class="accordion"><h1>$4</h1></button>
             <div class="panel">
-              <div id="westBrook" class="playerCard">
+              <div id="westBrook" class="playerCard 4worth" onclick="currentlySelected(this)">
                   <div class="playerIcon">
                       <img src="./images/rwhs.png" alt="">
                   </div>
@@ -129,7 +129,7 @@
                       <h3>ALL-AROUND SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="dd" class="playerCard">
+              <div id="dd" class="playerCard 4worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/ddhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>DEMAR DEROZAN</h1>
@@ -137,7 +137,7 @@
                       <h3>OFFENSIVE STAR</h3>
                   </div>
               </div>
-              <div id="giannis" class="playerCard">
+              <div id="giannis" class="playerCard 4worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/giannishs.png" alt=""></div>
                   <div class="playerText">
                       <h1>GIANNIS ANTETOKOUNMPO</h1>
@@ -145,7 +145,7 @@
                       <h3>ALL-AROUND SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="porzingis" class="playerCard">
+              <div id="porzingis" class="playerCard 4worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/porzingishs.png" alt=""></div>
                   <div class="playerText">
                       <h1>KRISTAPS PORZINGIS</h1>
@@ -153,7 +153,7 @@
                       <h3>INSIDE OUTSIDE SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="cousins" class="playerCard">
+              <div id="cousins" class="playerCard 4worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/cousinshs.png" alt=""></div>
                   <div class="playerText">
                       <h1>DEMARCUS COUSINS</h1>
@@ -165,7 +165,7 @@
 
             <button class="accordion"><h1>$3</h1></button>
             <div class="panel">
-              <div id="irving" class="playerCard">
+              <div id="irving" class="playerCard 3worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/irvinghs.png" alt=""></div>
                   <div class="playerText">
                       <h1>KYRIE IRVING</h1>
@@ -173,7 +173,7 @@
                       <h3>OFFENSIVE SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="butler" class="playerCard">
+              <div id="butler" class="playerCard 3worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/butlerhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>JIMMY BUTLER</h1>
@@ -181,7 +181,7 @@
                       <h3>TWO WAY SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="kawhi" class="playerCard">
+              <div id="kawhi" class="playerCard 3worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/kawhihs.png" alt=""></div>
                   <div class="playerText">
                       <h1>KAWHI LEONARD</h1>
@@ -189,7 +189,7 @@
                       <h3>ALL-AROUND SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="lma" class="playerCard">
+              <div id="lma" class="playerCard 3worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/lmahs.png" alt=""></div>
                   <div class="playerText">
                       <h1>LAMARCUS ALDRIDGE</h1>
@@ -197,7 +197,7 @@
                       <h3>LOW POST STAR</h3>
                   </div>
               </div>
-              <div id="embiid" class="playerCard">
+              <div id="embiid" class="playerCard 3worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/embiidhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>JOEL EMBIID</h1>
@@ -209,7 +209,7 @@
 
             <button class="accordion"><h1>$2</h1></button>
             <div class="panel">
-              <div id="lillard" class="playerCard">
+              <div id="lillard" class="playerCard 2worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/lillardhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>DAMIAN LILLARD</h1>
@@ -217,7 +217,7 @@
                       <h3>OFFENSIVE STAR</h3>
                   </div>
               </div>
-              <div id="klay" class="playerCard">
+              <div id="klay" class="playerCard 2worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/klayhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>KLAY THOMPSON</h1>
@@ -225,7 +225,7 @@
                       <h3>TWO WAY SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="pg13" class="playerCard">
+              <div id="pg13" class="playerCard 2worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/pg13hs.png" alt=""></div>
                   <div class="playerText">
                       <h1>PAUL GEORGE</h1>
@@ -233,7 +233,7 @@
                       <h3>LOCKDOWN DEFENDER</h3>
                   </div>
               </div>
-              <div id="blake" class="playerCard">
+              <div id="blake" class="playerCard 2worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/griffinhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>BLAKE GRIFFIN</h1>
@@ -241,7 +241,7 @@
                       <h3>ELITE LOW POST STAR</h3>
                   </div>
               </div>
-              <div id="gobert" class="playerCard">
+              <div id="gobert" class="playerCard 2worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/goberths.png" alt=""></div>
                   <div class="playerText">
                       <h1>RUDY GOBERT</h1>
@@ -253,7 +253,7 @@
 
             <button class="accordion"><h1>$1</h1></button>
             <div class="panel">
-              <div id="cp3" class="playerCard">
+              <div id="cp3" class="playerCard 1worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/cp3hs.png" alt=""></div>
                   <div class="playerText">
                       <h1>CHRIS PAUL</h1>
@@ -261,7 +261,7 @@
                       <h3>ALL-AROUND SUPERSTAR</h3>
                   </div>
               </div>
-              <div id="oladipo" class="playerCard">
+              <div id="oladipo" class="playerCard 1worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/oldaipohs.png" alt=""></div>
                   <div class="playerText">
                       <h1>VICTOR OLADIPO</h1>
@@ -269,7 +269,7 @@
                       <h3>OFFENSIVE STAR</h3>
                   </div>
               </div>
-              <div id="hayward" class="playerCard" onclick="currentlySelected(hayward)">
+              <div id="hayward" class="playerCard 1worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/haywardhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>GORDON HAYWARD</h1>
@@ -277,7 +277,7 @@
                       <h3>OFFENSIVE STAR</h3>
                   </div>
               </div>
-              <div id="green" class="playerCard" onclick="currentlySelected(green)">
+              <div id="green" class="playerCard 1worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/draymondhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>DRAYMOND GREEN</h1>
@@ -285,7 +285,7 @@
                       <h3>ALL-AROUND STAR</h3>
                   </div>
               </div>
-              <div id="horford" class="playerCard" onclick="currentlySelected(horford)">
+              <div id="horford" class="playerCard 1worth" onclick="currentlySelected(this)">
                   <div class="playerIcon"><img src="./images/horfordhs.png" alt=""></div>
                   <div class="playerText">
                       <h1>AL HORFORD</h1>

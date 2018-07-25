@@ -7,9 +7,11 @@ var gameModes = [document.getElementById('modern'),
 ];
 
 var inMode = 0;
+var inModernMode = 0;
 var playerSelected = 0;
+var modernBalance = 15
 
-
+$("#actualBalance").text("Your current balance is $" + modernBalance)
 
 function selectMode(mode) {
 
@@ -49,6 +51,7 @@ function selectMode(mode) {
 
     if (mode == document.getElementById('modern')) {
         $('#modernContainer').css('display', 'grid');
+        inModernMode = 1
     }
 
     $("#buildTeamText").hover(
@@ -69,6 +72,7 @@ function selectMode(mode) {
         $('#buildTeamText').css('cursor', 'default');
         $('#gridContainer').css('display', 'grid');
         $('#modernContainer').css('display', 'none');
+        inModernMode = 0;
 
     });
 
@@ -99,12 +103,24 @@ function currentlySelected(player) {
     selectedPlayerCache = player;
     console.log(selectedPlayerCache);
     playerSelected = 1;
-    // $('.playerCard').each(function(i, obj) {
-    //     if (this.id != player.id) {
-    //         $(this).css("opacity", "0.2");
-    //         $(this).click = null;
-    //     }
-    // });
+    if($(selectedPlayerCache).hasClass("5worth") && inModernMode == 1){
+      modernBalance-=5;
+    } else if($(selectedPlayerCache).hasClass("4worth") && inModernMode == 1){
+      modernBalance-=4
+    } else if($(selectedPlayerCache).hasClass("3worth") && inModernMode == 1){
+      modernBalance-=3
+    } else if($(selectedPlayerCache).hasClass("2worth") && inModernMode == 1){
+      modernBalance-=2
+    } else if($(selectedPlayerCache).hasClass("1worth") && inModernMode == 1){
+      modernBalance-=1
+    }
+    $('.playerCard').removeAttr("onclick");
+    $('.playerCard').each(function(i, obj) {
+        if (this.id != player.id) {
+            $(this).css("opacity", "0.2");
+            $(this).click = null;
+        }
+    });
 
     $(".rosterItem").hover(
         function() {
@@ -128,7 +144,7 @@ function currentlySelected(player) {
 
 
     $('.rosterItem').click(function() {
-      if(playerSelected == 1 && !$(this).hasClass("rosterItemActive")){
+      if(playerSelected == 1 && !$(this).hasClass("rosterItemActive") && modernBalance >= 0){
             $(this).find('h1').hide();
             $(this).find('h4').remove();
             $(this).css("display", "grid");
@@ -138,15 +154,17 @@ function currentlySelected(player) {
             $(this).addClass("white");
             $(selectedPlayerCache).find(".playerIcon").clone().appendTo(this);
             $(selectedPlayerCache).find(".playerText").clone().appendTo(this);
+            $("#actualBalance").text("Your current balance is $" + modernBalance)
             $(this).find(".tempText").hide();
             $(selectedPlayerCache).hide();
             $(this).addClass('rosterItemActive');
+            $('.playerCard').attr("onclick", "currentlySelected(this)");
             selectedPlayerCache = undefined;
-            // $('.playerCard').each(function(i, obj) {
-            //     if (this.id != player.id) {
-            //         $(this).css("opacity", "1");
-            //     }
-            // });
+            $('.playerCard').each(function(i, obj) {
+                if (this.id != player.id) {
+                    $(this).css("opacity", "1");
+                }
+            });
             playerSelected = 0;
           }
         })
