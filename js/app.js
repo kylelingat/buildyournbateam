@@ -17,7 +17,6 @@ function selectMode(mode) {
 
     inMode = 1;
     $('#buildTeamText').text('CLICK HERE TO RETURN');
-    $('#buildTeamText').css('cursor', 'pointer');
 
     $.fn.extend({
         animateCss: function(animationName, callback) {
@@ -69,7 +68,6 @@ function selectMode(mode) {
         inMode = 0;
         $(this).css("background-color", "#17408B");
         $(this).text("BUILD YOUR NBA TEAM");
-        $('#buildTeamText').css('cursor', 'default');
         $('#gridContainer').css('display', 'grid');
         $('#modernContainer').css('display', 'none');
         inModernMode = 0;
@@ -98,7 +96,7 @@ $('.playerCard').click(function() {
         scrollTop: $(".teamRoster").offset().top
     }, 700);
 });
-let selectedPlayerCache;
+var selectedPlayerCache;
 function currentlySelected(player) {
     selectedPlayerCache = player;
     console.log(selectedPlayerCache);
@@ -115,17 +113,16 @@ function currentlySelected(player) {
       modernBalance-=1
     }
     $('.playerCard').removeAttr("onclick");
-    $('.playerCard').each(function(i, obj) {
-        if (this.id != player.id) {
-            $(this).css("opacity", "0.2");
-            $(this).click = null;
-        }
-    });
+    // $('.playerCard').each(function(i, obj) {
+    //     if (this.id != player.id) {
+    //         $(this).css("opacity", "0.2");
+    //         $(this).click = null;
+    //     }
+    // });
 
     $(".rosterItem").hover(
         function() {
             if (playerSelected == 1 && typeof selectedPlayerCache !== "undefined" && !$(this).hasClass("rosterItemActive")) {
-                $(this).css("cursor", "pointer");
                 var borderLeft = $(selectedPlayerCache).css('border-left');
                 $(this).css('border-left', borderLeft);
                 $(this).find('h4').hide();
@@ -156,31 +153,19 @@ function currentlySelected(player) {
             $(selectedPlayerCache).find(".playerText").clone().appendTo(this);
             $("#actualBalance").text("Your current balance is $" + modernBalance)
             $(this).find(".tempText").hide();
-            $(selectedPlayerCache).hide();
+            $(selectedPlayerCache).addClass("inRoster");
             $(this).addClass('rosterItemActive');
-            $('.playerCard').attr("onclick", "currentlySelected(this)");
-            selectedPlayerCache = undefined;
             $('.playerCard').each(function(i, obj) {
                 if (this.id != player.id) {
-                    $(this).css("opacity", "1");
+                    $(this).attr("onclick", "currentlySelected(this)");
                 }
             });
+            selectedPlayerCache = undefined;
+
+
             playerSelected = 0;
           }
         })
 
-    // // $('.rosterItem').click(function() {
-    // //     if (playerSelected == 1) {
-    // //         $(this).find('h1').hide();
-    // //         $(this).find('h4').remove();
-    //         $(this).find('#permText > h2').append($(selectedPlayerCache).find(".playerText > h1")[0].innerText);
-    //         $(selectedPlayerCache).css("opacity", "0.2")
-    //         $('.playerCard').each(function(i, obj) {
-    //             if (this.id != player.id) {
-    //                 $(this).css("opacity", "1");
-    //             }
-    //         });
-    //         playerSelected = 0;
-    //     }
-    // });
+
 }

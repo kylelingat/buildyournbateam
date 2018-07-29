@@ -209,6 +209,9 @@ body {
   background-color: white;
 }
 
+.inRoster {
+  opacity: 0.2;
+}
 .accordion {
     background-color: #eee;
     color: #444;
